@@ -1,0 +1,30 @@
+Tест 1 (знание языка)
+
+1. Приведите пример предложения, которое удовлетворяет такому дереву разбора:
+(TOP (S (NP DT) (VP VBZ (NP DT JJ NN)) .))
+
+2. В каком месте нарушено правило грамматики британского английского в этом дереве разбора? Какое правило нарушено?
+(TOP (S (NP PRP$ NNS) (VP VB (NP (NP NNP) , (NP NNP CC NNP)))
+
+-------------------------------------------------------------------------
+Answers:
+
+1. Example: "That is a good choice."
+
+(TOP
+  (S
+    (NP (DT That))
+    (VP (VBZ is)
+		(NP (DT a) (JJ good) (NN choice)))
+    (. .)))
+	
+2. (TOP (S (NP PRP$ NNS) (VP VB (NP (NP NNP) , (NP NNP CC NNP))).))
+
+To resolve ambiguity a serial comma before CC can be added.
+
+	(NP (NP NNP) , (NP NNP CC NNP))
+	correct for: "Kent, Tyne and Wear" (Tyne and Wear is a county)
+	incorrect for: "Kent, Norfolk and Essex" (Norfolk and Essex are two separate counties)
+
+
+	
