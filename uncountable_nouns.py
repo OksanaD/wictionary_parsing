@@ -1,5 +1,6 @@
 import json
 import urllib2
+import re
 
 
 def get_json_data(cmcontinue):
@@ -22,7 +23,9 @@ def get_uncountable_nouns():
             
     return all_data
 
-
+result = []
 for item in get_uncountable_nouns():
-    print item.encode('utf-8')
+    if re.match(r'\A[A-Za-z]+\Z', item.encode('utf-8')):
+        print item
+        result.append(item.encode('utf-8'))
 
